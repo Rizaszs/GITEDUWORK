@@ -1,0 +1,19 @@
+<-- INTRO GIT -->
+
+=> Apa itu git ?
+  Git merupakan software berbasis Version Control System (VCS) yang bertugas untuk mencatat perubahan seluruh file atau repository suatu project. Version Control System (VCS) itu sendiri merupakan sebuah sistem yang melakukan source code management (SCM) )untuk mengelola perubahan di setiap dokumen, program komputer, website, dan kumpulan pemrograman lainnya. Developer software biasa menggunakan Git untuk distributed revision (VCS terdistribusi), hal ini bertujuan untuk menyimpan database tidak hanya ke satu tempat. Namun semua orang yang terlibat dalam penyusunan kode dapat menyimpan database ini.
+
+=> Manfaat menggunakan git ?
+  > Bisa menyimpan seluruh versi code.
+  > Mempermudah kolaborasi antar programmer dalam menciptakan sistem.
+  > Bisa berkontribusi di proyek open source.
+  > Memudahkan tracking terhadap perubahan yg telah dibuat.
+  > Memahami cara deploy modern.
+  > Dsb.
+  
+=> layanan cloud yang berguna untuk menyimpan dan mengelola sebuah project git ?
+  <> GitHub adalah sebuah website dan layanan berbasis cloud bagi para developer untuk menyimpan dan mengelola kode, serta mendokumentasikan dan mengontrol perubahannya.
+  
+  <> GitLab adalah layanan mirip github yang dapat digunakan organisasi untuk menyediakan manajemen internal git repositories. Ini adalah sistem manajemen Git-repository yang di-host-sendiri yang menjaga code private pengguna dan dapat dengan mudah menyebarkan perubahan kode.
+  
+  <> Bitbucket adalah manajemen repositori Git yang dikembangkan khusus untuk tim profesional. Hub pusat untuk menangani semua repositori git berkolaborasi pada kode sumber dan memandu semua siklus pengembangan perangkat lunak. Ini adalah bagian dari keluarga Atlassian dengan alat-alat seperti Confluence, Jira dan lainnya yang dibuat untuk mendukung tim teknis untuk mengeksplorasi seluruh potensi. Penyebaran Bitbucket dibuat dalam tiga opsi berbeda. Mereka adalah cloud Bitbucket, pusat data Bitbucket, dan Server Bitbucket.
