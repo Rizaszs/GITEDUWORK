@@ -1,3 +1,6 @@
+
+
+
 <-- INTRO GIT -->
 
 => Apa itu git ?
@@ -17,3 +20,21 @@
   <> GitLab adalah layanan mirip github yang dapat digunakan organisasi untuk menyediakan manajemen internal git repositories. Ini adalah sistem manajemen Git-repository yang di-host-sendiri yang menjaga code private pengguna dan dapat dengan mudah menyebarkan perubahan kode.
   
   <> Bitbucket adalah manajemen repositori Git yang dikembangkan khusus untuk tim profesional. Hub pusat untuk menangani semua repositori git berkolaborasi pada kode sumber dan memandu semua siklus pengembangan perangkat lunak. Ini adalah bagian dari keluarga Atlassian dengan alat-alat seperti Confluence, Jira dan lainnya yang dibuat untuk mendukung tim teknis untuk mengeksplorasi seluruh potensi. Penyebaran Bitbucket dibuat dalam tiga opsi berbeda. Mereka adalah cloud Bitbucket, pusat data Bitbucket, dan Server Bitbucket.
+
+
+<-- FUNDAMENTAL GIT -->
+
+=> Ada empat elemen dasar dalam Git Workflow, yaitu Working Directory, Staging Area, Local Repository dan Remote Repository.
+
+<> Berikut perintah perintah yang sering digunakan dalam mengoperasikan git
+  > Git init, Digunakan untuk menginisialisasi repository, Atau memberi tahu folder saat ini akan dijadikan repository. Perintah ini merupakan hal wajib yang harus dilakukan dalam membuat sebuah repository karena jika tidak diinisialisasi git tidak bisa beroperasi.
+  > Git config, Digunakan untuk konfigurasi email dan username, biasanya disamakan dengan akun github/gitlab, Config global untuk konfigurasi server, Config local untuk konfigurasi local. Untuk melihat semua konfigurasi bisa menggunakan perintah git config --list.
+  > Git status, Digunakan untuk mengetahui status file (Untracked/staging aera/modified).
+  > Git add, Untuk memasukan file ke staging area.
+  > Git commit, Digunakan untuk memberikan catatan perubahan yang telah dilakukan.
+  > Git log, Digunakan untuk melihat riwayat commit, jika riwayatnya banyak biasanya untuk keluar menekan tombol "Q".
+  > Git clone, Digunakan untuk  mengcopy repo dari server.
+  > Git remote, Semacam api  untuk berinteraksi dari client dengan server.
+  > Git push, Untuk mengirim commit ke server.
+  > Git pull, Untuk mengambil commit dari server jika ada perubahandi server yang dibuat oleh branch lain.
+  
