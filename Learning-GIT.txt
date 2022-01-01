@@ -1,5 +1,7 @@
 
 
+#################################################################################################################################################################################
+
 
 <-- INTRO GIT -->
 
@@ -60,3 +62,17 @@
 
 <> Conflict pada branch (bentrokan antar branch)
  > Kondisi yang terjadi ketika merging 2 branch yang memiliki 2 perubahan pada file yang sama, Ketika conflict kita tidak bisa melakukan commit. Untuk melakukan commit conflict harus diselesaikan terlebih dahulu.
+ 
+ 
+<-- GIT GUI --> 
+ => sebelumnya kita membahas git versi cli sekarang kita akan membahas git versi GUI dan untuk aplikasinya sendiri saya menggunakan sourcetree sebenarnya banyak aplikasi git berbasis GUi yg lain cuma yg saya pelajari sourcetree dari eduwork hehehe..
+ 
+ <> SOURCETREE
+  > software git berbasis GUI untuk memudahkan dalam mengoperasikan git.
+  > sorcetree mudah digunakan karena tidak harus bisa perintah dasar terminal atau powershell. solving conflict lebih mudah dan mempercepat kinerja. 
+
+ => Solving conflict menggunakan sourcetree
+  > Dari SourceTree, klik Tools-> Options. Kemudian pada tab "General", pastikan untuk mencentang kotak untuk memungkinkan SourceTree untuk memodifikasi file konfigurasi Git Anda. Kemudian beralih ke tab "Diff". Di bagian bawah, gunakan drop down untuk memilih program eksternal yang ingin digunakan untuk melakukan diff dan penggabungan. Saya telah menginstal Diff merge. Setelah selesai, klik OK. Sekarang ketika ada penggabungan, kita bisa masuk di bawah Tindakan-> Selesaikan Konflik-> Luncurkan Alat Gabung Eksternal.
+
+
+#################################################################################################################################################################################
