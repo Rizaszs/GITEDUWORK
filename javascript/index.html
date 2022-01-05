@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .anu {
+            margin: 120px;
+            align-items: center;
+            text-align: center;
+            line-height: 40px;
+            color: rgb(255, 153, 0);
+        }
+    </style>
+</head>
+
+<body>
+    
+    <script>
+        let nilai = prompt("Input nilai:");
+        let peringkatHuruf = "";
+        if (nilai >= 90) {
+            peringkatHuruf = "A , pertahankan nilaimu nak."
+            document.write(`<h2 class="anu"> "My advice is to never listen to any advice, not even this one." </h2>`);
+        } else if (nilai >= 80) {
+            peringkatHuruf = "B , bagus seksli."
+            document.write(`<h2 class="anu"> "Sebesar usaha yang dikeluarkan, sebesar itu pula kesuksesan yang didapat." </h2>`);
+        } else if (nilai >= 60) {
+            peringkatHuruf = "C , cukup."
+            document.write(`<h2 class="anu"> "Jangan mengulangi kesalahan yang sama. Masih banyak kesalahan-kesalahan lain yang perlu dicoba." </h2>`);
+        } else if (nilai >= 50) {
+            peringkatHuruf = "D , aduh kamu ini."
+            document.write(`<h2 class="anu"> "Kamu harus kerja keras, karena kamu harus sadar skincare cewe harganya mahal bree." </h2>`);
+        } else {
+            peringkatHuruf = "E , astagfirullah."
+            document.write(`<h2 class="anu"> "Hargai kedua orang tuamu, mereka berhasil lulus dari sekolah tanpa bantuan Google." </h2>`);
+        }
+        confirm(`Nilai anda ${peringkatHuruf}`);
+    </script>
+    
+</body>
+
+</html>
