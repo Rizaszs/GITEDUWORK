@@ -1,0 +1,144 @@
+body {
+    font-family: "Crimson pro", "serif";
+}
+
+:root {
+    --clr-accent: hsl(44, 100%, 50%);
+}
+
+.bg-custnav {
+    background-color: rgba(0, 0, 0, 0.836);
+}
+
+.bg-custom {
+    background-color: rgba(0, 0, 0, 0.74) !important;
+    transition: 0.3s;
+    border: 1px solid var(--clr-accent);
+    color: var(--clr-accent) !important;
+}
+
+.bg-custom:hover {
+    background-color: var(--clr-accent) !important;
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: white !important;
+}
+
+.bg-active {
+    background-color: rgba(0, 0, 0, 0) !important;
+    transition: 0.3s;
+    border: 0px;
+    color: var(--clr-accent) !important;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar-brand h1 {
+    color: var(--clr-accent);
+}
+
+.kandel-sedeng {
+    font-weight: bold;
+}
+
+.link {
+    color: gray;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: var(--clr-accent);
+}
+
+.home-wrapper {
+    padding: 180px 0 100px 0;
+    background-image: url(https://rizaszs.github.io/riz-folio/assets/img/hero-bg.png);
+    background-size: cover;
+    background-position: top center;
+    color: var(--clr-accent);
+    text-align: center;
+    width: 100%;
+    height: 670px;
+}
+
+.titlename h1 {
+    opacity: 0.7;
+    font-size: 55px;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.titlename h2 {
+    opacity: 0.7;
+    font-size: 23px;
+    margin: 0px;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.social-icon {
+    margin-top: -30px;
+}
+
+.heading {
+    padding: 20px 20px;
+    text-align: center;
+    color: var(--clr-accent);
+}
+
+.heading h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.heading p {
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.bio-wrapper {
+    height: 100%;
+    padding: 10px 0;
+}
+
+.bio-wrapper p {
+    color: black;
+}
+
+.skills-wrapper {
+    margin: 0% 5% 5% 5%;
+}
+
+.skills-wrapper .icon {
+    font-size: 45px;
+    padding: 25px 15px 0px 25px;
+    color: var(--clr-accent);
+}
+
+.skills-wrapper .card:hover .icon {
+    color: white;
+}
+
+.skills-wrapper .card {
+    background-color: rgb(175, 175, 175);
+}
+
+.skills-wrapper .card:hover {
+    background-image: linear-gradient(90deg, var(--clr-accent), #ff0062);
+    transform: translateY(5px);
+    transition: 0.4s ease;
+}
+
+.contact-wrapper {
+    background-color: rgba(3, 3, 3, 0.014);
+    padding: 5%;
+}
+
+@media all and (max-width: 670px) {
+    .home-wrapper {
+        text-align: left;
+    }
+}
