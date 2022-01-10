@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tebak angka</title>
+  </head>
+  <body>
+    <script>
+      alert(
+        `Selamat datang di game tebak angka, kamu harus menebak angka 1 - 3 dan kamu akan bermain dalam 5 ronde. player yang berhasil menebak benar paling banyak akan memenangkan pertandingan... SELAMAT BERMAIN!!!`
+      );
+
+      let scoreP1 = 0;
+      let scoreP2 = 0;
+      let ronde = 5;
+
+      for (let i = 1; i <= ronde; i++) {
+        const nilai = [1, 2, 3];
+        const nilaiAcak = nilai[Math.floor(Math.random() * nilai.length)];
+        alert("Ronde Ke " + i);
+
+        let player1 = prompt("Player 1 Silahkan Masukan Angka ");
+        if (player1 == nilaiAcak) {
+          // menaikan scor ketika tebakan benar
+          scoreP1++;
+        }
+
+        let player2 = prompt("Player 2 Silahkan Masukan Angka");
+        if (player2 == nilaiAcak) {
+          // menaikan scor ketika tebakan benar
+          scoreP2++;
+        }
+
+        // pengecekan nilai
+        if (player1 === player2) {
+          alert("tebakan tidak boleh sama");
+          confirm("lanjut ke ronda berikutnya");
+        }
+
+        if (player1 < 1 || player2 < 1) {
+          alert("tebakan tidak boleh lebih kecil dari 1");
+          confirm("lanjut ke ronda berikutnya");
+        }
+
+        if (player1 > 3 || player2 > 3) {
+          alert("tebakan tidak boleh lebih besar dari 3");
+          confirm("lanjut ke ronda berikutnya");
+        }
+
+        alert(
+          "Jawaban Yang Benar Adalah : " +
+            nilaiAcak +
+            "\n------------------------------------\nScore Player 1 : " +
+            scoreP1 +
+            "\n------------------------------------\nScore Player 2 : " +
+            scoreP2
+        );
+      }
+
+      // hasil game
+
+      if (scoreP1 > scoreP2) {
+        alert("Selamat Player 1 Menang");
+      } else if (scoreP2 > scoreP1) {
+        alert("Selamat Player 2 Menang");
+      } else {
+        alert("Permainan Seri");
+      }
+    </script>
+  </body>
+</html>
