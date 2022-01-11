@@ -6,57 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tebak angka</title>
   </head>
+  <!-- KOREKSI :
+program belum berjalan seperti yang seharusnya, contoh kasus:
+jika saya memasukkan tebakan yang sama antara player 1 dan player 2, maka player 1 dan player 2 akan mendapatkan score walaupun sudah ada alert yg menyatakan tebakan tidak boleh sama.
+bisa diperbaiki lagi flow nya, saran dari saya mungkin bisa gunakan while loop agar lebih mudah -->
   <body>
     <script>
       alert(
         `Selamat datang di game tebak angka, kamu harus menebak angka 1 - 3 dan kamu akan bermain dalam 5 ronde. player yang berhasil menebak benar paling banyak akan memenangkan pertandingan... SELAMAT BERMAIN!!!`
       );
-
+      // inisialisasi
       let scoreP1 = 0;
       let scoreP2 = 0;
-      let ronde = 5;
-
-      for (let i = 1; i <= ronde; i++) {
+      let ronde = 1;
+      let stop = true;
+      while (stop) {
         const nilai = [1, 2, 3];
         const nilaiAcak = nilai[Math.floor(Math.random() * nilai.length)];
-        alert("Ronde Ke " + i);
+        let player1 = parseInt(prompt("Player 1: masukan angka"));
+        let player2 = parseInt(prompt("Player 2: masukan angka"));
 
-        let player1 = prompt("Player 1 Silahkan Masukan Angka ");
-        if (player1 == nilaiAcak) {
-          // menaikan scor ketika tebakan benar
-          scoreP1++;
+        // pengecekan nilai menggunakan function yg telah dibuaat
+        let ulangi = validasi(player1, player2);
+
+        if (!ulangi) {
+          stop = window.confirm("Ulangi?");
+        } else {
+          if (player1 !== nilaiAcak && player2 !== nilaiAcak) {
+            alert("Tebakan tidak ada yang benar");
+          } else {
+            if (player1 === nilaiAcak) {
+              alert("Player 1 menebak dengan benar");
+              // menaikan scor ketika tebakan benar
+              scoreP1++;
+            }
+            if (player2 === nilaiAcak) {
+              alert("Player 2 menebak dengan benar");
+              // menaikan scor ketika tebakan benar
+              scoreP2++;
+            }
+          }
+
+          alert(
+            "Tebakan Yang Benar : " +
+              nilaiAcak +
+              "\n------------------------------------\nScore Player 1 : " +
+              scoreP1 +
+              "\n------------------------------------\nScore Player 2 : " +
+              scoreP2
+          );
+
+          ronde++;
+          if (ronde <= 5) {
+            stop = window.confirm("Ronde ke " + ronde + "?");
+          } else {
+            if (scoreP1 > scoreP2) {
+              alert("Mantaap Player 1");
+              stop = false;
+            } else if (scoreP1 < scoreP2) {
+              alert("Mantaap Player 2");
+              stop = false;
+            } else {
+              alert("Pertandingan seri");
+              ronde = 1;
+              scoreP1 = 0;
+              scoreP2 = 0;
+              stop = window.confirm("Ayo bermain lagi?");
+            }
+          }
         }
-
-        let player2 = prompt("Player 2 Silahkan Masukan Angka");
-        if (player2 == nilaiAcak) {
-          // menaikan scor ketika tebakan benar
-          scoreP2++;
-        }
-
-        // pengecekan nilai
+      }
+      // Pengecekan nilai
+      function validasi(player1, player2) {
         if (player1 === player2) {
           alert("tebakan tidak boleh sama");
-          confirm("lanjut ke ronda berikutnya");
+          return false;
         }
 
         if (player1 < 1 || player2 < 1) {
           alert("tebakan tidak boleh lebih kecil dari 1");
-          confirm("lanjut ke ronda berikutnya");
+          return false;
         }
 
         if (player1 > 3 || player2 > 3) {
           alert("tebakan tidak boleh lebih besar dari 3");
-          confirm("lanjut ke ronda berikutnya");
+          return false;
         }
 
-        alert(
-          "Jawaban Yang Benar Adalah : " +
-            nilaiAcak +
-            "\n------------------------------------\nScore Player 1 : " +
-            scoreP1 +
-            "\n------------------------------------\nScore Player 2 : " +
-            scoreP2
-        );
+        if (isNaN(player1) || isNaN(player2)) {
+          alert("Tebakan harus diisi angka 1-3");
+          return false;
+        }
+
+        return true;
       }
 
       // hasil game
@@ -66,7 +108,7 @@
       } else if (scoreP2 > scoreP1) {
         alert("Selamat Player 2 Menang");
       } else {
-        alert("Permainan Seri");
+        alert("Terima kasih telah bermain");
       }
     </script>
   </body>

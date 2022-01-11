@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-mono">
+    <center>
+      <div class="m-4">
+        <h1 class="text-2xl font-bold">M-ini Library</h1>
+      </div>
+      <div class="container flex justify-center">
+        <div class="flex flex-col">
+          <div class="inline-block shadow rounded-lg overflow-hidden">
+            <div class="border-b border-gray-200 shadow" id="app"></div>
+          </div>
+        </div>
+      </div>
+    </center>
+    <script>
+      class Table {
+        constructor(init) {
+          this.init = init;
+        }
+
+        createHeader(data) {
+          let open = "<thead class='bg-gray-200'><tr>";
+          let close = "</tr></thead>";
+          data.forEach((d) => {
+            open += `<th class='px-6 py-2 text-3sm border-b border-gray-200 uppercase tracking-wider text-dark'>${d}</th>`;
+          });
+
+          return open + close;
+        }
+
+        createBody(data) {
+          let open =
+            "<tbody class='bg-white border-b divide-y divide-gray-200'>";
+          let close = "</tbody>";
+
+          data.forEach((d) => {
+            open += `
+        <tr class='hover:bg-gray-100'>
+          <td class='px-6 py-4 text-3sm'>${d[0]}</td>
+          <td class='px-6 py-4 text-3sm text-gray-500'>${d[1]}</td>
+          <td class='px-6 py-4 text-3sm text-gray-500'>${d[2]}</td>
+        </tr>
+      `;
+          });
+
+          return open + close;
+        }
+
+        render(element) {
+          let table =
+            "<table class='border-collapse'>" +
+            this.createHeader(this.init.columns) +
+            this.createBody(this.init.data) +
+            "</table>";
+          element.innerHTML = table;
+        }
+      }
+
+      const table = new Table({
+        columns: ["Name", "Email", "Address"],
+        data: [
+          ["Uciha Rizal", "rizaluzia@akansuci.com", "konohagakure"],
+          ["uzumaki santoso", "usanto@gmail.com", "amegakure"],
+          ["Senju harjuna", "junasenju@integer.com", "depokagakure"],
+        ],
+      });
+      const app = document.getElementById("app");
+      table.render(app);
+    </script>
+  </body>
+</html>
