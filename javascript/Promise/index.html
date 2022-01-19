@@ -38,11 +38,13 @@
             <div class="flex items-center justify-center m-3">
               <div class="flex border-2 rounded-full">
                 <input
-                  type="text"
-                  class="rounded-full px-4 py-2 w-80"
+                  type="search"
+                  class="rounded-full px-4 py-2 w-80 input-keyword"
                   placeholder="Search..."
                 />
-                <button class="flex items-center justify-center px-4">
+                <button
+                  class="flex items-center justify-center px-4 search-button"
+                >
                   <svg
                     class="w-6 h-6 text-gray-600"
                     fill="currentColor"
@@ -60,5 +62,8 @@
         </div>
       </nav>
     </header>
+    <!-- main content -->
+    <center class="grid grid-cols-4 gap-3 my-6 mx-6" id="data"></center>
+    <script type="module" src="./promise.js"></script>
   </body>
 </html>
