@@ -37,7 +37,6 @@ function showCards(articles) {
     <img
       class="h-100"
       src="${articles.urlToImage}"
-      alt="Sunset in the mountains"
     />
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">${articles.title}</div>
